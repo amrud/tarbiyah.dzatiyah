@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "29141889244",
+    "firebase_url": "https://tarbiyah-dzatiyah.firebaseio.com",
+    "project_id": "tarbiyah-dzatiyah",
+    "storage_bucket": "tarbiyah-dzatiyah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29141889244:android:5a807508c9f0872c",
+        "android_client_info": {
+          "package_name": "my.org.haluan.tarbiyahdzatiyah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29141889244-g36gs8pa162qqljgb2aiddkb37jrtkiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTzV0njfid9Sib9FEsZYuJhePuc5Bg7Yk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

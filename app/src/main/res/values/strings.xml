@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Tarbiyah Dzatiyah</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_country">Country Code</string>
+    <string name="prompt_phoneno">Phone Number</string>
+    <string name="prompt_tarbiyah_name">Name</string>
+    <string name="action_sign_in">Log in</string>
+    <string name="action_register">Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_submit">Submit</string>
+    <string name="error_user_not_found">No user registered with the email</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
+    <string name="logout_message">Do you want to logout?</string>
 </resources>

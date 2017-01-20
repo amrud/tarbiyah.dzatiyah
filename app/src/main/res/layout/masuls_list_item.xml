@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="80dp"
+              android:gravity="center_vertical"
+              android:background="?android:selectableItemBackground">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/empty_profile"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/masul_profile"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/masul_status"
+        android:background="@android:color/holo_red_dark"
+        android:textSize="12sp"
+        android:paddingTop="2dp"
+        android:layout_centerVertical="true"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/white"
+        tools:text="Pending"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/masul_name"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:layout_toLeftOf="@id/masul_status"
+        android:layout_toRightOf="@id/masul_profile"
+        tools:text="Adam"/>
+</RelativeLayout>

@@ -28,6 +28,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.LoginEvent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -65,12 +67,31 @@ public class LoginActivity extends BaseActivity implements LoaderManager.LoaderC
     private View mProgressView;
     private View mLoginFormView;
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initWidgets();
+
         mApp = FirebaseApp.getInstance();
         mAuth = FirebaseAuth.getInstance(mApp);
+        mAuthListener = new FirebaseAuth.AuthStateListener(){
 
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    finish();
+                } else {
+                    // User is signed out
+                }
+            }
+        };
+
+    }
+
+    private void initWidgets(){
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -106,7 +127,6 @@ public class LoginActivity extends BaseActivity implements LoaderManager.LoaderC
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
-
     private void registerUser() {
 
         // Reset errors.
@@ -247,6 +267,7 @@ public class LoginActivity extends BaseActivity implements LoaderManager.LoaderC
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
+
             showProgress(true);
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                 @Override
@@ -363,8 +384,18 @@ public class LoginActivity extends BaseActivity implements LoaderManager.LoaderC
     public void onStart(){
         super.onStart();
         // Check auth on Activity start
-        if (mAuth.getCurrentUser() != null) {
-            onAuthSuccess(mAuth.getCurrentUser());
+//        if (mAuth.getCurrentUser() != null) {
+//            onAuthSuccess(mAuth.getCurrentUser());
+//        }
+
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
         }
     }
 
@@ -385,6 +416,9 @@ public class LoginActivity extends BaseActivity implements LoaderManager.LoaderC
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String username = usernameFromEmail(mEmailView.getText().toString());
                 try {
+
+                    Answers.getInstance().logLogin(new LoginEvent().putMethod("UsernamePassword").putSuccess(true));
+
                     User user = dataSnapshot.getValue(User.class);
                     if (user == null){
                         // Write new user

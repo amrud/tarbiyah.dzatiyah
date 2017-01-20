@@ -23,4 +23,12 @@
     <string name="logout">Logout</string>
     <string name="profile">Profile</string>
     <string name="logout_message">Do you want to logout?</string>
+    <string name="details">Details</string>
+    <string name="addmadu">Add Mad\'u</string>
+    <string name="amal_date">Date</string>
+    <string name="user_stat">Statistic</string>
+    <string name="user_masul">Mas\'ul</string>
+    <string name="user_madu">Mad\'u</string>
+    <string name="madudetails_amal">Amal</string>
+    <string name="madudetails_info">Information</string>
 </resources>

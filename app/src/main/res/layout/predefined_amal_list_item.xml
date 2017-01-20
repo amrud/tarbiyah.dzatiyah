@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:tools="http://schemas.android.com/tools"
+              tools:context="my.org.haluan.tarbiyahdzatiyah.AddAmalActivity"
+                android:padding="16dp"
+                android:gravity="center_horizontal"
+                android:background="?android:selectableItemBackground">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/preamal_checkbox"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/preamal_title"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/preamal_checkbox"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Title"/>
+
+</RelativeLayout>

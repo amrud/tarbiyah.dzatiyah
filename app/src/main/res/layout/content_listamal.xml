@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<my.org.haluan.tarbiyahdzatiyah.views.ContentListAmal xmlns:android="http://schemas.android.com/apk/res/android"
+                                                      xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/cla_checkbox"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/cla_tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:layout_toLeftOf="@id/cla_checkbox"
+        tools:text="Solat"
+        />
+
+
+</my.org.haluan.tarbiyahdzatiyah.views.ContentListAmal>

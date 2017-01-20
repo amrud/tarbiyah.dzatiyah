@@ -1,13 +1,13 @@
 package my.org.haluan.tarbiyahdzatiyah.models;
 
-import java.util.List;
+import java.io.Serializable;
 
 /**
- * Created by Ismi on 1/20/2017.
+ * Created by Ismi on 1/21/2017.
  */
 
-public class Masul {
-    public User masulDetails;
-
-
+public class Masul implements Serializable {
+    public User masul;
+    public String status;
+    public String uid;
 }

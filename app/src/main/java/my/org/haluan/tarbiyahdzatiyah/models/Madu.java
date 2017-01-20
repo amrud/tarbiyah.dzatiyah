@@ -1,13 +1,17 @@
 package my.org.haluan.tarbiyahdzatiyah.models;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Ismi on 1/20/2017.
  */
 
-public class Madu {
-    public User maduDetails;
-    public String madu_status;
+@IgnoreExtraProperties
+public class Madu implements Serializable{
+    public User madu;
+    public String status;
 
 }

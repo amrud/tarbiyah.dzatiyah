@@ -1,10 +1,14 @@
 package my.org.haluan.tarbiyahdzatiyah.models;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+import java.io.Serializable;
+
 /**
  * Created by Ismi on 1/20/2017.
  */
-
-public class User {
+@IgnoreExtraProperties
+public class User implements Serializable{
     public String name;
     public String mobile;
     public String email;

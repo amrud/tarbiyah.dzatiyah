@@ -7,7 +7,5 @@ import java.util.List;
  */
 
 public class MasulList {
-
-    public String uid;
     public List<Masul> masulList;
 }

@@ -28,14 +28,24 @@
             android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".AddAmalActivity"
+                  android:label="Add Amal"
                   android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".AddMaduActivity"
+                  android:label="@string/addmadu"
                   android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".MaduDetails"
                   android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".UserProfileActivity"
+                  android:label="@string/profile"
                   android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".AmalsDetailsActivity"
+                  android:label="@string/details"
+                  android:theme="@style/AppTheme.NoActionBar" />
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="473b04549d78094a25f9eea51cb5d4078d0b0240" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

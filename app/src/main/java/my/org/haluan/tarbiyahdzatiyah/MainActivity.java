@@ -107,6 +107,9 @@ public class MainActivity extends BaseActivity implements ValueEventListener{
         attachRecyclerViewAdapter();
     }
 
+
+
+
     private void attachRecyclerViewAdapter() {
         mAdapter = new FirebaseRecyclerAdapter<Amals, AmalsViewHolder>(
                 Amals.class, R.layout.amals_list_item, AmalsViewHolder.class, mAmalsQueury) {
